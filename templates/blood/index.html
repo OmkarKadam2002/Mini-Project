@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="">
+
+
+<head>
+    <style>
+        .xyz{
+          margin-bottom: 0px;
+          background-image: url('{% static "image/homepage1.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      </style>
+      
+</head>
+
+
+<body>
+  {% include "blood/navbar.html" %}
+<br>
+<section id="section-jumbotron" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+    <div class="container text-center ">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
+      
+      <br><br><br><br>
+      
+    </div>  
+  </section>
+
+
+  <div class="jumbotron" style="margin-top: 0px;margin-bottom: 0px;">
+    <div class="w3-pale-red" id="Contact" >
+      <div class="w3-container w3-padding-32">
+        <div class="w3-center w3-padding-32">
+          <h4 class="w3-wide"><i><b>DONATING BLOOD</i></b></h4>
+          <p class="w3-opacity"><i>What is the need?</i></p><br>
+          <p class="w3-pale-red w3-text-black w3-left-align">
+            According to the WHO, India suffers from an Annual Deficit of 2 million units,
+            as only 1% of the Population Donates Blood each Year.
+            It is a constant requirement for a regular supply of Blood by a sufficient number of healthy people;
+            in order to ensure that Blood will always be available WHENEVER & WHEREVER it is needed.
+          </p>
+          <br><br><br>
+          <p class="w3-opacity"><i>Benefits:</i></p><br>
+          <p class="w3-pale-red w3-text-black w3-left-align">
+            A lot of Myths are present about Blood Donation, which are the reasons why Potential and Existing Donors show Resistance to Regularly Donate Blood. 
+            <br>However - what most people FAIL to realize is that Donating Blood has Physical and Psychological gains:
+            <br>1] Improved Cardiovascular Health
+            <br>2] Protection From Cancer
+            <br>3] Lower Risk Of Heart Attack
+            <br>........are just a few of them.
+                <br>
+                </p>
+                <p class="w3-pale-red w3-text-black w3-left-align">
+                  <br><br><br>
+                  <i>Every 2 seconds someone needs Blood! Since it can't be manufactured, there is NO substitute for Human Blood.
+                  To overcome this Scarcity, many Blood Drives are regularly conducted by many organizations.
+                  Blood donation is an Extremely Noble Deed....!!!! </i> 
+                </p>
+                <br><br><br><br>
+    <h3 class="w3-wide">ABOUT US</h3>
+    <p class="w3-opacity"><i>Why choose RedDrop......?</i></p><br>
+    <p class="w3-pale-red w3-text-black w3-left-align">
+      Developed as digital platform for Blood Donation, RedDrop is aimed at connecting Requester and willing Blood Donor in a convenient manner.
+      <br>This web application enables searching donors within a defined geography, real time connections, notifications and updates.
+      <br>Objectives:
+      <br>• Transparent communication.
+      <br>• Automated process of Blood Donation.
+      <br>• Centralizing Database of Blood Banks.
+          <br>
+          </p>
+          <p class="w3-opacity"><i><b>Ever Blood Donor is a LifeSaver!</b></i></p><br>
+          <br><br><br>
+    <h2 class="w3-wide">CONTACT</h2>
+     <p class="w3-opacity"><i>Let us help you.....</i></p><br>
+    <p class="w3-pale-red w3-text-black w3-left-align">
+      Drop a message with any questions or inquiries and we'll be in touch with you soon.<br>
+          </p>
+          </div>
+    <form name="sentMessage" id="contactForm " action = "/" method='POST'  >
+      {%csrf_token %}
+    <p><input class="w3-input w3-padding-16 w3-border form-control" id="name" type="text" placeholder="name" name='name' required name="name"></p>
+    <p><input class="w3-input w3-padding-16 w3-border form-control" id="email" type="email" placeholder="email" name='email' required name="Email"></p>
+    <p><input class="w3-input w3-padding-16 w3-border form-control" id="phone" type="tel" placeholder="phone number" name='phone' required name="Phone" ></p>
+    <p><input class="w3-input w3-padding-16 w3-border form-control" id="message" type="text" placeholder="message" name='message' required name="Message"></p>
+    <p><button class="w3-button w3-round w3-red w3-block form-control" id="sendMessageButton" type="submit">SEND MESSAGE</button></p>
+    </form>
+    </div>
+    </div>
+
+
+   
+  </div>
+
+
+
+
+
+</body>
+
+</html>
